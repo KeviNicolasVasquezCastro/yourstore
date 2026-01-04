@@ -11,6 +11,8 @@ public class BuyMacBookHomepageStepDefinitions {
     @Given("user logged")
     public void userLogged(DataTable dataTable){
 
+
+
     }
 
     @When("user buy the mac book")

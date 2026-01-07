@@ -4,12 +4,15 @@ package models;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.cucumber.datatable.DataTable;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 @Data
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class AbrirUrl{
 
     String url;

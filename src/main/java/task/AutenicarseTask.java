@@ -18,8 +18,14 @@ public class AutenicarseTask implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
+        System.out.println("Username: " + autenticarse.getUsername());
+        System.out.println("Password: " + autenticarse.getPassword());
+
         actor.attemptsTo(
 
+                Click.on(loginPage.MyAccount),
+                Click.on(loginPage.login),
                 Enter.theValue(autenticarse.getUsername()).into(loginPage.username),
                 Enter.theValue(autenticarse.getPassword()).into(loginPage.password),
                 Click.on(loginPage.buttonLogin)

@@ -1,10 +1,10 @@
 package task;
 
 import models.AbrirUrl;
-import models.Autenticarse;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Browser;
 import net.serenitybdd.screenplay.actions.Open;
 
 public class AbrirUrlTask implements Task {
@@ -20,7 +20,8 @@ public class AbrirUrlTask implements Task {
 
         actor.attemptsTo(
 
-                Open.url(abrirUrl.getUrl())
+                Open.url(abrirUrl.getUrl()),
+                Browser.maximize()
         );
 
     }
